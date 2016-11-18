@@ -3,11 +3,9 @@ img {
         height: 200px;
         align:"middle";
       }
-#logo {
-        background-color:LightBlue;
-      }
 
       body {
           text-align: center;
+          background-color:LightBlue;
       }
 
