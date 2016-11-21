@@ -6,5 +6,11 @@
     <textarea rows="10" cols="80" id="inputText"><span>Hello</span></textarea>
     <button onclick="testHTML();">Test!</button>
     <span style="color:blue">Hello!</span>
+    <script>
+      function testHTML() {
+        var userinput = document.getElementById("inputText")
+        userinput.innerhtml = userInput.value
+      }
+    </script>
   </body>
 </html>
