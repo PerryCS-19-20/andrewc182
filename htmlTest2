@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <span id="color" onmouseover="mouseOver();">Yo</span>
+    <script>
+      function mouseOver() {
+        var span = document.getElementById=("color");
+        span.innerHTML = changeColor("red");
+      }
+      function changeColor(red){
+        document.body.style.backgroundColor=red;
+      }
+  </body>
+</html>
