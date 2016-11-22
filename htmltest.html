@@ -1,15 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
   </head>
   <body>
-    <textarea rows="10" cols="80" id="inputText"><span>Hello</span></textarea>
+    <textarea rows="10" cols="80" id="inputText"></textarea>
     <button onclick="testHTML();">Test!</button>
-    <span style="color:blue">Hello!</span>
+    <span id="text" style="color:blue">Hello!</span>
     <script>
       function testHTML() {
-        var userInput = document.getElementById("inputText")
-        userInput.innerhtml = userInput.value
+        var userInput = document.getElementById("inputText");
+        var span = document.getElementById("text");
+        span.innerHTML = userInput.value;
+        
       }
     </script>
   </body>
