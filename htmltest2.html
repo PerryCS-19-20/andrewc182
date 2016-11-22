@@ -4,10 +4,13 @@
   </head>
   <body>
     <h1 id="color" onmouseover="mouseOver()">Mouse over me</h1>
-    <span>Hi</span>
     <script>
       function mouseOver() {
-        document.getElementById=("color").style.backgroundColor = "red";
+        document.getElementById=("color");
+        changeColor("red");
+      }
+      function changeColor(colorName) {
+        document.body.style.backgroundColor = colorName;
       }
     </script>
   </body>
