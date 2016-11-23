@@ -3,7 +3,7 @@
   <head>
   </head>
   <body>
-    <h1 id="color" onmouseover="mouseOver()">Mouse over me</h1>
+    <h1 id="color" onmouseout="mouseOut()"  onmouseover="mouseOver()">Mouse over me</h1>
     <script>
       function mouseOver() {
         document.getElementById=("color");
@@ -11,6 +11,10 @@
       }
       function changeColor(colorName) {
         document.body.style.backgroundColor = colorName;
+      }
+      function mouseOut() {
+        document.getElementById=("color");
+        changeColor("LightGreen");
       }
     </script>
   </body>
