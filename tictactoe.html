@@ -17,28 +17,28 @@
   <body text-align: center>
     <table>
       <tr>
-        <td id="1" onclick="play('1');">X</td>
-        <td id="2" onclick="play('2');">O</td>
-        <td id="3" onclick="play('3');">O</td>
+        <td id="1" onclick="playX('1');"></td>
+        <td id="2" onclick="playX('2');"></td>
+        <td id="3" onclick="playX('3');"></td>
       </tr>
       <tr>
-        <td id="4" onclick="play('4');">O</td>
-        <td id="5" onclick="play('5');">X</td>
-        <td id="6" onclick="play('6');">X</td>
+        <td id="4" onclick="playX('4');"></td>
+        <td id="5" onclick="playX('5');"></td>
+        <td id="6" onclick="playX('6');"></td>
       </tr>
       <tr>
-        <td id="7" onclick="play('7');">O</td>
-        <td id="8" onclick="play('8');">O</td>
-        <td id="9" onclick="play('9');">X</td>
+        <td id="7" onclick="playX('7');"></td>
+        <td id="8" onclick="playX('8');"></td>
+        <td id="9" onclick="playX('9');"></td>
       </tr>
     </table>
     
     <script>
-        function play(x) {
-            var player = "X";
-            var cell = document.GetElementById("x");
+        var player = "X";
+        function playX(x) {
+            var cell = document.GetElementById(x);
             
-            if{cell.textContent=""}{
+            if{cell.textContent="x"}{
                 cell.textContent=player;
                 if{player="X"}{
                     check();
@@ -66,6 +66,14 @@
             var L3 = document.getElementById(c3);
             if{L1.textContent===L2.textContent && L2.textContent===L3.textContent && L1.textContent!==""}{
                 won=true;
+            }
+            
+            if{won===true}{
+                L1.style.backgroundColor="red";
+                L2.style.backgroundColor="red";
+                L3.style.backgroundColor="red";
+                
+                alert(player + "won!");
             }
         }
         
