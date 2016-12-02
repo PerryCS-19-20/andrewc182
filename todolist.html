@@ -5,10 +5,14 @@
   <body>
     <textarea rows="10" cols="80" id="inputText"></textarea>
     <button onclick="testHTML();">Test!</button>
+    <ul id="text" style="color:blue; font-size:30px;"><li>Buy Songs</li></ul>
     <script>
       function testHTML() {
       var userInput = document.getElementById("inputText");
       var span = document.getElementById("text");
+      var list = document.createElement("li");
+      list.textContent = userInput.value;
+      span.appendChild(list);
       }
     </script>
   </body>
