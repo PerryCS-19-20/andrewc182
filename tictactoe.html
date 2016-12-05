@@ -36,11 +36,11 @@
     <script>
         var player = "X";
         function play(x) {
-            var cell = document.GetElementById(x);
+            var cell = document.getElementById(x);
             
-            if{cell.textContent="x"}{
+            if{cell.textContent==""}{
                 cell.textContent=player;
-                if{player="X"}{
+                if{player=="X"}{
                     check();
                     player="O";
                 }else{
@@ -50,11 +50,34 @@
             }
         }
         
-        function check() {
-            
+        function check(){
+            check1(1,2,3);
+            check1(4,5,6);
+            check1(7,8,9);
+            check1(1,4,7);
+            check1(2,5,8);
+            check1(3,6,9);
+            check1(1,5,9);
+            check1(3,5,7);
         }
-        
-        
+        function check1(c1,c2,c3){
+            var won;
+            var L1 = document.getElementById(c1);
+            var L2 = document.getElementById(c2);
+            var L3 = document.getElementById(c3);
+            
+            if{L1.textContent===L2.textContent && L2.textContent===L3.textContent && L1.textContent!==""}{
+                won=true;
+            }
+            
+            if{won==true}{
+                L1.style.backgroundColor="red";
+                L2.style.backgroundColor="red";
+                L3.style.backgroundColor="red";
+                
+                alert(player + "won!");
+            }
+        }
     </script>
   </body>
 </html>
