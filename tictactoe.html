@@ -17,67 +17,71 @@
   <body text-align: center>
     <table>
       <tr>
-        <td id="1" onclick="play('1');"></td>
-        <td id="2" onclick="play('2');"></td>
-        <td id="3" onclick="play('3');"></td>
+        <td id="1" onclick="playX('1');"></td>
+        <td id="2" onclick="playX('2');"></td>
+        <td id="3" onclick="playX('3');"></td>
       </tr>
       <tr>
-        <td id="4" onclick="play('4');"></td>
-        <td id="5" onclick="play('5');"></td>
-        <td id="6" onclick="play('6');"></td>
+        <td id="4" onclick="playX('4');"></td>
+        <td id="5" onclick="playX('5');"></td>
+        <td id="6" onclick="playX('6');"></td>
       </tr>
       <tr>
-        <td id="7" onclick="play('7');"></td>
-        <td id="8" onclick="play('8');"></td>
-        <td id="9" onclick="play('9');"></td>
+        <td id="7" onclick="playX('7');"></td>
+        <td id="8" onclick="playX('8');"></td>
+        <td id="9" onclick="playX('9');"></td>
       </tr>
     </table>
     
     <script>
-        var player = "X";
-        function play(x) {
-            var cell = document.getElementById(x);
-            
-            if{cell.textContent==""}{
-                cell.textContent=player;
-                if{player=="X"}{
-                    check();
-                    player="O";
-                }else{
-                    check();
-                    player="X";
-                }
-            }
-        }
         
-        function check(){
-            check1(1,2,3);
-            check1(4,5,6);
-            check1(7,8,9);
-            check1(1,4,7);
-            check1(2,5,8);
-            check1(3,6,9);
-            check1(1,5,9);
-            check1(3,5,7);
-        }
-        function check1(c1,c2,c3){
-            var won;
-            var L1 = document.getElementById(c1);
-            var L2 = document.getElementById(c2);
-            var L3 = document.getElementById(c3);
-            
-            if{L1.textContent===L2.textContent && L2.textContent===L3.textContent && L1.textContent!==""}{
-                won=true;
-            }
-            
-            if{won==true}{
-                L1.style.backgroundColor="red";
-                L2.style.backgroundColor="red";
-                L3.style.backgroundColor="red";
+                var won=false;
+                var player = "O";
+                var player = "X";
+                function playX(x) {
+                 var cell = document.getElementById(x);
+                 
+                 
+                 if((cell.textContent==="") && (won=== false)){
+                     cell.textContent=player;
+                     if(player==="X"){
+                         check();
+                         player= "O";
+                     }else{
+                        check();
+                         player="X";
+                     }      
+                 } 
+                }
+                function check(){
+                    check3(1,2,3);
+                    check3(4,5,6);
+                    check3(7,8,9);
+                    check3(1,4,7);
+                    check3(2,5,8);
+                    check3(3,6,9);
+                    check3(1,5,9);
+                    check3(3,5,7);
+                }
                 
-                alert(player + "won!");
-            }
-        }
+                function check3(c1,c2,c3){
+                    var L1 = document.getElementById(c1);
+                    var L2 = document.getElementById(c2);
+                    var L3 = document.getElementById(c3);
+                    
+                    if(L1.textContent===L2.textContent && L2.textContent===L3.textContent && L1.textContent!==""){
+                        won=true;
+                    
+                    
+                        L1.style.backgroundColor="red"
+                        L2.style.backgroundColor="red";
+                        L3.style.backgroundColor="green";
+
+                        alert(player + "has won!");
+                    }
+                }
+                
+            
     </script>
   </body>
 </html>
