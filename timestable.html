@@ -23,10 +23,20 @@
         // Adds table
         var body = document.body;
         body.appendChild(timesTable);
-        
-        // Fill in table
-        
+        for(var i = 1; i < 11; i++) {
+            var row = document.createElement("tr");
+            timesTable.appendChild(row);
+            
+            for(var j = 1; j< 11; j++) {
+                var column = document.createElement("td");
+                row.appendChild(column);
+                column.textContent = i * j;
+                if(j % 3 == 0 && 1 && 2 && 3) {
+                    column.style.backgroundColor="red";
+                }
+                }
+        }
       }
-    </script>
+     </script>
   </body>
 </html>
