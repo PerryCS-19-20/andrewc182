@@ -15,35 +15,61 @@
   </head>
   <body onload="buildTimesTable()">
     <script>
-      function buildTimesTable() {
-        // Creates a table
-        var timesTable = document.getElementById("timesTable");
-        if (timesTable !== null) {
-            timesTable.parentNode.removeChild(timesTable);
+            //make the table delete the table and make a new one when the slider changes
+            var er =12;
+            var re = 12;
+            
+        function changeValue(){
+            var timesTable = document.getElementById("timesTable");
+            if (timesTable !== null) {
+                    timesTable.parentNode.removeChild(timesTable);        
+            }
+            er= document.getElementById("tableWidth").value;
+            re= document.getElementById("tableHeight").value;
+            
         }
         
-        // Adds table
-        timesTable = document.createElement("table");
-        timesTable.id = "timesTable";
         
-        var body= document.body;
-        body.appendChild(timesTable);
-        
-        var width = document.getElementById("tableWidth").value;
-        for(var i = 1; i < 11; i++) {
-            var row = document.createElement("tr");
-            timesTable.appendChild(row);
+        function buildTimesTable() {
+            changeValue();
+            var tab = document.createElement("table");
+            tab.id = "timesTable";
             
-            for(var j = 1; j< 11; j++) {
-                var column = document.createElement("td");
-                row.appendChild(column);
-                column.textContent = i * j;
-                if(j % 3 === 0 && 1 && 2 && 3) {
-                    column.style.backgroundColor="blue";
+
+
+            // Add the table to the document's body
+            var body = document.body;
+            body.appendChild(tab);
+
+            // Fill in the multiplication tablefor( i=0;i<10; i++){
+            for (i = 0; i < er; i++) {
+
+                var row = document.createElement("tr");
+                row.id = "newCol";
+                tab.appendChild(row);
+                for (j = 0; j < re; j++) {
+                    var col;
+
+                    if (i === 0) {
+                        col = document.createElement("th");
+                        col.textContent = j;
+                        
+                    } else {
+
+                        if (j === 0) {
+                            col = document.createElement("th");
+                            col.textContent = i;
+                        } else {
+                            col = document.createElement("td");
+                            col.textContent = i * j;
+                        }
+                    }
+                    row.appendChild(col);
+                    col.id = "newCol";
                 }
+
             }
         }
-      }
-     </script>
+    </script>
   </body>
 </html>
