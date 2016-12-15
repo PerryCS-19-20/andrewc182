@@ -14,6 +14,11 @@
     </style>
   </head>
   <body onload="buildTimesTable()">
+    <input class="inputV" type="range" id="tableWidth" min="1" max="20" value="10" onchange="buildTimesTable();">
+    <br>
+    <input class="inputV" type="range" id="tableHeight" min="1" max="20" value="10" onchange="buildTimesTable();">
+    <br>
+    <br>
     <script>
             //make the table delete the table and make a new one when the slider changes
             var er = 12;
@@ -71,5 +76,9 @@
             }
         }
     </script>
+    <table id="timesTable"><tr id="newCol"><th id="newCol">0</th><th id="newCol">1</th><th id="newCol">2</th>
+            <th id="newCol">3</th><th id="newCol">4</th><th id="newCol">5</th><th id="newCol">6</th><th id="newCol">7</th><th id="newCol">8</th><th id="newCol">9</th></tr><tr id="newCol"><th id="newCol">1</th><td id="newCol">1</td><td id="newCol">2</td><td id="newCol">3</td><td id="newCol">4</td><td id="newCol">5</td><td id="newCol">6</td><td id="newCol">7</td><td id="newCol">8</td><td id="newCol">9</td></tr>
+        <tr id="newCol"><th id="newCol">2</th><td id="newCol">2</td><td id="newCol">4</td><td id="newCol">6</td><td id="newCol">8</td><td id="newCol">10</td><td id="newCol">12</td><td id="newCol">14</td><td id="newCol">16</td><td id="newCol">18</td></tr><tr id="newCol"><th id="newCol">3</th><td id="newCol">3</td><td id="newCol">6</td><td id="newCol">9</td><td id="newCol">12</td><td id="newCol">15</td><td id="newCol">18</td><td id="newCol">21</td><td id="newCol">24</td><td id="newCol">27</td></tr><tr id="newCol"><th id="newCol">4</th><td id="newCol">4</td><td id="newCol">8</td><td id="newCol">12</td><td id="newCol">16</td><td id="newCol">20</td><td id="newCol">24</td><td id="newCol">28</td><td id="newCol">32</td><td id="newCol">36</td></tr><tr id="newCol"><th id="newCol">5</th><td id="newCol">5</td><td id="newCol">10</td><td id="newCol">15</td><td id="newCol">20</td><td id="newCol">25</td><td id="newCol">30</td><td id="newCol">35</td><td id="newCol">40</td><td id="newCol">45</td></tr><tr id="newCol"><th id="newCol">6</th><td id="newCol">6</td><td id="newCol">12</td><td id="newCol">18</td><td id="newCol">24</td><td id="newCol">30</td><td id="newCol">36</td><td id="newCol">42</td><td id="newCol">48</td><td id="newCol">54</td></tr><tr id="newCol"><th id="newCol">7</th><td id="newCol">7</td><td id="newCol">14</td><td id="newCol">21</td><td id="newCol">28</td><td id="newCol">35</td><td id="newCol">42</td><td id="newCol">49</td><td id="newCol">56</td><td id="newCol">63</td></tr><tr id="newCol"><th id="newCol">8</th><td id="newCol">8</td><td id="newCol">16</td><td id="newCol">24</td><td id="newCol">32</td><td id="newCol">40</td><td id="newCol">48</td><td id="newCol">56</td><td id="newCol">64</td><td id="newCol">72</td></tr><tr id="newCol"><th id="newCol">9</th><td id="newCol">9</td><td id="newCol">18</td><td id="newCol">27</td><td id="newCol">36</td><td id="newCol">45</td><td id="newCol">54</td><td id="newCol">63</td><td id="newCol">72</td><td id="newCol">81</td></tr>
+    </table>
   </body>
 </html>
