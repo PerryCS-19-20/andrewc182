@@ -1,2 +1,6 @@
-function buildMap(sitemapWrapper) {
+function buildMap(sitemapWrapper) 
+    document.createElement("ul");
+    
+    
+}
   
